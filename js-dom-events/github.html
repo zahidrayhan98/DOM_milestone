@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="personal-info">My personal Info</h1>
+    <input id="text-field" type="text" placeholder="please input value">
+    <button id="btn-hide" disabled>Delete</button>
+    <script>
+        // document.getElementById("text-field").addEventListener('keyup',function (event){
+        //     const text = event.target.value;
+        //     const deleteButton =document.getElementById('btn-hide');
+        //     if(text==="delete"){
+        //         deleteButton.removeAttribute('disabled')
+        //     }
+        //     else{
+        //         deleteButton.setAttribute('disabled',true);
+        //     }
+        // })
+        //    try again//
+        document.getElementById("text-field").addEventListener('keyup',function (event){
+            const text =event.target.value;
+            const deleteButton =document.getElementById('btn-hide');
+            if(text=="hide"){
+                deleteButton.removeAttribute('disabled');
+            }
+            else{
+                deleteButton.setAttribute('disabled', true);
+            }
+        })
+
+        document.getElementById('btn-hide').addEventListener('click', function(){
+         const personal =document.getElementById('personal-info');
+         personal.style.display='none';   
+        })
+
+    </script>
+</body>
+</html>

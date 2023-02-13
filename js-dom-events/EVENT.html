@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js Dom Summary</title>
+</head>
+<body>
+    <h1>Dom event Headlers</h1>
+    <p id="input-text">default input text</p>
+    <input id="input-field" type="text">
+    <button id="btn-update">Update</button>
+    <br>
+    <br>
+    <h3 id="handle-status">default text</h3>
+    <button onclick="handleClick()">Make  button</button>
+    <button id="event-listen">Handler by lister Advister</button>
+  <script>
+    function handleClick(){
+        const handlerStatus =document.getElementById('handle-status');
+        handlerStatus.innerText='it is called a handler';
+
+    }
+    // option2///
+
+    document.getElementById('event-listen').addEventListener('click' , function (){
+        const handlerStatus=document.getElementById("handle-status");
+        handlerStatus.innerText='it is not handle fact';
+    })
+    // option 2 recap////;
+    document.getElementById('btn-update').addEventListener('click', function(){
+        const inputField=document.getElementById('input-field');
+        const inputText = inputField.value;
+
+        const p=document.getElementById('input-text');
+        p.innerText = inputText;
+        inputField.value ='';
+
+
+    })
+  </script>  
+</body>
+</html>

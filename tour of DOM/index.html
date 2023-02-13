@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tour of DOM</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <style>
+        li{
+            color: tomato;
+        }
+        #title-heading{
+            color: blue;
+        }
+        .places{
+            color: blueviolet;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <section>
+        <h1>welcome to DOM</h1>
+        <ul>
+            <li class="places">cox,bazar</li>
+            <li class="places">cox,bazar</li>
+            <li >cox,bazar</li>
+        </ul>
+        </section>
+    </header>
+    <main>
+        <section>
+        <h1 id="title-heading">awesome dom baba</h1>
+        <ul>
+            <li>shafayet</li>
+            <li>korim</li>
+            <li>bonobas</li>
+        </ul>
+        </section>
+        <section>
+            <ul>
+                <li>madaripur</li>
+                <li>madaripur</li>
+                <li>madaripur</li>
+            </ul>
+        </section>
+    </main>
+    
+<script src="js/dom.js"></script>
+<script>
+   
+   const collection =document.getElementsByTagName("li");
+//    console.log(collection);
+for (const li of collection){
+    // console.log(li);
+}
+const destination =document.getElementsByClassName("places")
+for(const destinations of destination){
+    console.log(destinations.innerText);
+}
+    
+</script>
+</body>
+</html>
